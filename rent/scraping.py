@@ -58,11 +58,11 @@ for page in range(1, max_page+1):
                 data["礼金"] = tbody.findAll("td")[4].findAll("li")[1].getText().strip()
 
                 data["間取り"] = tbody.findAll("td")[5].findAll("li")[0].getText().strip()
-                data["面積"] = tbody.findAll("td")[5].findAll("li")[1].getText().strip()
+                data["めんせき"] = tbody.findAll("td")[5].findAll("li")[1].getText().strip()
                 
                 data["URL"] = "https://suumo.jp" + tbody.findAll("td")[8].find("a").get("href")
                 
                 all_data.append(data)    
 
-# convert to dataframe
+# convert to dataframeeee
 df = pd.DataFrame(all_data)
