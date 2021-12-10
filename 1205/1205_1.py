@@ -10,4 +10,5 @@ sys.stdin = io.StringIO(_INPUT)
 a = int(input())
 b = int(input())
 
-x 
+# print(a)
+print(5000000000*b + a)
