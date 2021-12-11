@@ -8,6 +8,9 @@ aaa
 """
 sys.stdin = io.StringIO(_INPUT)
 
+# 本番コードはこのコメント以下に書く、importも
+
+
 n = int(input())
 a , b , c = list(map(int, input().split()))
 
