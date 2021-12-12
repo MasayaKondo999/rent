@@ -8,7 +8,7 @@ aaa
 """
 sys.stdin = io.StringIO(_INPUT)
 
-# 本番コードはこのコメント以下に書く、importも
+# 本番コードはこのコメント以下に書く、import,def,も
 
 
 n = int(input())
