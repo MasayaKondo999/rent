@@ -28,7 +28,7 @@
 <a href="https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/">Minecraft Bedrock Dedicated Server Script Installation / Configuration Guide</a>
 
 <h3>RTX用リソースパックのインストール</h3>
-<p>リソースパック(RTXサポートを含む)のインストール方→<a href="https://jamesachambers.com/minecraft-bedrock-server-resource-pack-guide/" target="_blank" rel="noopener">step by step Minecraft Bedrock Dedicated Server Resource Packs / Optional RTX guide here</a>.</p>
+<p>リソースパック(RTXサポート)のインストール方法→<a href="https://jamesachambers.com/minecraft-bedrock-server-resource-pack-guide/" target="_blank" rel="noopener">step by step Minecraft Bedrock Dedicated Server Resource Packs / Optional RTX guide here</a>.</p>
 
 <h3>テストが完了しているディストリビューション</h3>
 <ul>
@@ -52,17 +52,17 @@
 </ul>
 
 <h3>Multiple Servers and Installation Paths</h3>
-<p>The server supports multiple servers at once. SetupMinecraft.sh を再度実行する際は、初回起動時同じパスで実行してください。 The path structure of the scripts is $ROOTPATH/minecraftbe/yourservername which is why the "root" path SetupMinecraft.sh asks you for should always be the same.</p>
-<p>The individual server folder is determined by the "server name" you enter for your server.  If it's an existing server the scripts will be safely updated.  If it's a new server then a new folder will be created under $ROOTPATH/minecraftbe/newservername.</p>
+<p>複数ワールドの. SetupMinecraft.sh を再度実行する際は、初回起動時と同じディレクトリパスで実行してください。 ディレクトリパスの構成は $ROOTPATH/minecraftbe/yourservername です。そのため、SetupMinecraft.sh がアクセスするディレクトリパスは常に同じにしなければならないです。</p>
+<p>マイクラサーバーのフォルダ名は "server name" として入力した名前になります.  If it's an existing server the scripts will be safely updated.  If it's a new server then a new folder will be created under $ROOTPATH/minecraftbe/newservername.</p>
 <p>Keep the installation the path the same for all servers and the script will manage all this for you.</p>
 
-<h3>systemd権限を追加します(オプション)</h3>
-<p>Some users track the Minecraft servers by the systemd service.  If you are using the automatic daily restart feature the service will not show as "online" since restart.sh does not run as root so it doesn't restart the systemd service.</p>
-<p>To fix this add a line to your sudoers file (sudo visudo) like this:</p>
+<h3>systemd権限を追加(オプション)</h3>
+<p>マインクラフトをsystemdサービスとして追跡しているユーザーについて、毎日の自動再起動機能を使用している場合。restart.sh はrootとして起動せず、systemd サービスとして再起動しません、よって、サービスは"online"と表示しません。</p>
+<p>これを修正するには sudoers ファイル (sudo visudo) に下記コードを加えてください:</p>
 <pre>yourusername ALL=(ALL) NOPASSWD: /bin/systemctl start yourservername</pre>
 <p>This will give you
 
-<h3>Update History</h3>
+<h3>アップデート履歴</h3>
 <ul>
   <li>November 2nd 2021</li>
   <ul>
