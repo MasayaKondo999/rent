@@ -1,4 +1,3 @@
-<!-- # Minecraft Bedrock Server -->
 # マインクラフト 統合版(bedrock edition)サーバー構築ツール
 
 ※ 統合版とbedrock editionの２つの呼び方がありますがここではbedrock editionに統一しています。
@@ -13,7 +12,7 @@
   <li>Ubuntu / Debian ディストリビューション下の動作がサポートされています</li>
   <li>マインクラフトをOSのシステムサービスに登録し、OS起動時にマインクラフトが自動起動するように設定可能</li>
   <li>サーバー再起動時、自動バックアップ</li>
-  <li>Supports multiple instances -- you can run multiple Bedrock servers on the same system</li>
+  <li>マルチインスタンスに対応 -- 同一システム上で複数の Bedrock サーバー が起動できます。</li>
   <li>サーバー起動時に最新版への自動アップデート</li>
   <li>start.sh, stop.sh and restart.sh ,これらのスクリプトで簡単操作</li>
   <li>"logs" ディレクトリへタイムスタンプのログが可能</li>
@@ -51,10 +50,10 @@
   </ul>
 </ul>
 
-<h3>Multiple Servers and Installation Paths</h3>
+<h3>マルチサーバーとインストールパスについて</h3>
 <p>複数ワールドの. SetupMinecraft.sh を再度実行する際は、初回起動時と同じディレクトリパスで実行してください。 ディレクトリパスの構成は $ROOTPATH/minecraftbe/yourservername です。そのため、SetupMinecraft.sh がアクセスするディレクトリパスは常に同じにしなければならないです。</p>
-<p>マイクラサーバーのフォルダ名は "server name" として入力した名前になります.  If it's an existing server the scripts will be safely updated.  If it's a new server then a new folder will be created under $ROOTPATH/minecraftbe/newservername.</p>
-<p>Keep the installation the path the same for all servers and the script will manage all this for you.</p>
+<p>マイクラサーバーのフォルダ名は "server name" として入力した名前になります. スクリプ上で存在していればマインクラフトのアップデートは機能します。  もしも、新しいフォルダーでサーバーを作成した場合のパスは $ROOTPATH/minecraftbe/newservername. となります。</p>
+<p>すべてのワールドのサーバーのインストールは同じパスにしてください。同一にすることでワールドを管理します</p>
 
 <h3>systemd権限を追加(オプション)</h3>
 <p>マインクラフトをsystemdサービスとして追跡しているユーザーについて、毎日の自動再起動機能を使用している場合。restart.sh はrootとして起動せず、systemd サービスとして再起動しません、よって、サービスは"online"と表示しません。</p>
