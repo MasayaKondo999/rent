@@ -1,26 +1,17 @@
-import io
-import sys
+n=int(input())  #数値入力 「N」だけの入力のとき
 
-_INPUT = """\
-2
-1 2 3
-aaa
-"""
-sys.stdin = io.StringIO(_INPUT)
+a,b=map(int, input().split())  #複数数値入力　「A B」みたいなスペース空いた入力のとき
 
-# 本番コードはこのコメント以下に書く、import,def,も
+c=list(map(int, input().split()))  #リスト入力 「a1 a2 a3 ...」みたいな配列のような入力のとき
 
+s=[list(map(int,list(input()))) for i in range(h)]  # 二次元配列入力　二次元マップみたいな入力のとき
 
-n = int(input())
-a , b , c = list(map(int, input().split()))
+# 最初にすべて読み込む必要がある場合 - 事前に各リストを用意しておく
+N = int(input())
 
-print(n)
+t = [0] * N
+x = [0] * N
 
-print(a , b , c)
+for i in range(N):
+    t[i] , x[i] = map(int, input().split())
 
-print(list(input()))
-
-# テスト出力
-# 2
-# [1, 2, 3]
-# ['a', 'a', 'a']
