@@ -11,6 +11,10 @@ sys.stdin = io.StringIO(_INPUT)
 # 本番コードはこのコメント以下に書く、import,def,も
 
 
+
+
+
+
 n = int(input())
 a , b , c = list(map(int, input().split()))
 
