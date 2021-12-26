@@ -14,7 +14,6 @@ sys.stdin = io.StringIO(_INPUT)
 
 
 
-
 n = int(input())
 a , b , c = list(map(int, input().split()))
 
