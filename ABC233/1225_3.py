@@ -23,11 +23,3 @@ for i in range(N) :
 
 print(ball)
 
-ball_num = len(ball)
-# print(ball_num)
-for i in ball :
-    # print(i)
-    for j in i :
-        # print(j)
-
-        print(j)

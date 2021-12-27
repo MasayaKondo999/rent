@@ -18,3 +18,7 @@ print(*l,sep="\n")
 
 # list を反転
 l.reverse()
+
+# 二次配列以上、特定の行、列でソート
+AX = sorted(AX, reverse=True , key=lambda x: x[0])
+print("二次配列以上、特定の行、列でソート" + str(AX))
